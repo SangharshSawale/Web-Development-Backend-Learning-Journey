@@ -21,14 +21,21 @@ This repository helps me to:
 
 ## 🧠 What I am learning
 
-In this backend journey, I will be learning topics such as:
+In this backend journey, I am learning and practicing the following topics step-by-step:
 
-- Server-side programming  
-- APIs and REST architecture  
-- Databases  
-- Authentication & authorization  
-- Backend frameworks  
-- Project structure and best practices  
+- Node.js  
+- Express.js  
+- EJS (Template Engine)  
+- REST APIs  
+- Starting with SQL  
+- SQL
+- Database Relationships  
+- Node with SQL  
+- MongoDB 
+- MongoDB with Express  
+- Middlewares  
+- Error Handling  
+- Miscellaneous backend concepts and practice
 
 ---
 
