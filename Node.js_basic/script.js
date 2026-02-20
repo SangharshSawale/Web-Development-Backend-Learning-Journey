@@ -1,15 +1,4 @@
 // ------------------------------------------------------------
-// script.js
-// Main entry file for backend practice
-// Demonstrates:
-// 1. Basic Node.js execution
-// 2. Command line arguments
-// 3. CommonJS imports
-// 4. ES Module imports (currently in use)
-// ------------------------------------------------------------
-
-
-// ------------------------------------------------------------
 // Basic JavaScript execution in Node.js
 // ------------------------------------------------------------
 
