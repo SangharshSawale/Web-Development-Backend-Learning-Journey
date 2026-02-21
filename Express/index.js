@@ -1,53 +1,35 @@
-// ------------------------------------------------------------
 // Importing Express
-// ------------------------------------------------------------
 
 const express = require("express");
 const app = express();
 
 
-// ------------------------------------------------------------
-// Defining server port
-// ------------------------------------------------------------
 
 let port = 8080;
 
 
-// ------------------------------------------------------------
-// Starting the server
-// ------------------------------------------------------------
 
+// Starting the server
 app.listen(port, () => {
     console.log("App is listening on port", port);
 });
 
 
-// ------------------------------------------------------------
-// Middleware example
-// NOTE:
-// If this middleware sends a response, routes below will not run
-// ------------------------------------------------------------
 
+// Middleware example
 app.use((req, res, next) => {
     console.log("request received");
     next();     // pass control to the next route
 });
 
 
-// ------------------------------------------------------------
 // Root route
-// ------------------------------------------------------------
-
 app.get("/", (req, res) => {
     res.send("I am root");
 });
 
 
-// ------------------------------------------------------------
 // Route parameters example
-// URL example: /sangharsh/101
-// ------------------------------------------------------------
-
 app.get("/:username/:id", (req, res) => {
     let { username, id } = req.params;
     let code = `<h1>Welcome @${username}</h1>`;
@@ -55,11 +37,7 @@ app.get("/:username/:id", (req, res) => {
 });
 
 
-// ------------------------------------------------------------
 // Query parameter example
-// URL example: /search?q=apple
-// ------------------------------------------------------------
-
 app.get("/search", (req, res) => {
 
     let { q } = req.query;
@@ -72,10 +50,7 @@ app.get("/search", (req, res) => {
 });
 
 
-// ------------------------------------------------------------
 // Simple routes
-// ------------------------------------------------------------
-
 app.get("/fruit", (req, res) => {
     res.send("you contacted fruit path");
 });
@@ -89,10 +64,7 @@ app.get("/orange", (req, res) => {
 });
 
 
-// ------------------------------------------------------------
 // 404 handler
-// ------------------------------------------------------------
-
 app.use((req, res) => {
     res.status(404).send("This path does not exist");
 });

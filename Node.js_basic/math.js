@@ -1,14 +1,4 @@
-// ------------------------------------------------------------
-// math.js
-// This file demonstrates how to EXPORT values using
-// ES Modules (export keyword).
-// The exported members will be imported inside script.js
-// ------------------------------------------------------------
 
-
-// ------------------------------------------------------------
-// CommonJS style (kept for learning reference – not used now)
-// ------------------------------------------------------------
 
 // const add = (a,b) => a + b;
 // const sub = (a,b) => a - b;
@@ -17,10 +7,7 @@
 // const PI = 3.14;
 
 
-// ------------------------------------------------------------
 // ES Module exports (currently used in this project)
-// ------------------------------------------------------------
-
 export const add = (a, b) => a + b;
 export const sub = (a, b) => a - b;
 export const mul = (a, b) => a * b;          // By using export, data is sent to script.js
@@ -28,9 +15,7 @@ export const div = (a, b) => a / b;
 export const PI = 3.14;
 
 
-// ------------------------------------------------------------
 // Object export using CommonJS (kept for learning reference)
-// ------------------------------------------------------------
 
 // const obj = {
 //     add : add,
