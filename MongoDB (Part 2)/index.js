@@ -9,6 +9,7 @@ async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/test');
 }
 
+// insert one
 const userSchema = new mongoose.Schema({
     name : String,
     email : String,
@@ -36,6 +37,7 @@ user2.save().then((res) => {
     console.log(err);
 })
 
+// insert many
 User.insertMany([
     {name : "Vikki", email: "vikki23@gamail.com", age : 23},
     {name : "Adam", email : "adam123@gmail.com", age : 30},
