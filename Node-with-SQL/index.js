@@ -29,6 +29,8 @@ let getRandomUser = () => {
   ];
 }
 
+
+//root route
 app.get("/", (req, res) => {
     let q = "SELECT COUNT(*) FROM user";
     connection.query(q,(err, result) =>{
@@ -41,7 +43,7 @@ app.get("/", (req, res) => {
    
 })
 
-
+//users route
 app.get("/user",(req, res) => {
     let q = "SELECT id, username, email FROM user";
     connection.query(q, (err, users) => {
@@ -53,6 +55,8 @@ app.get("/user",(req, res) => {
     }) 
 })
 
+
+//edit route
 app.get("/user/:id/edit", (req, res) => {
     let {id} = req.params;
     let q = `SELECT * FROM user WHERE id='${id}'`;
@@ -67,6 +71,7 @@ app.get("/user/:id/edit", (req, res) => {
 
 })
 
+//update route
 app.patch("/user/:id", (req, res) => {
     let {id} = req.params;
     let {password : formPass, userName: newUsername} = req.body;
@@ -106,6 +111,7 @@ app.get("/user/:id/delete", (req, res) => {
 
 })
 
+//delete route
 app.delete("/user/:id", (req, res) => {
     let {id} = req.params;
     let {password : formPass, email : formEmail} = req.body;
@@ -135,7 +141,7 @@ app.get("/user/new", (req, res) => {
     res.render("newuser.ejs")
 })
 
-
+//Add new user route
 app.post("/user/new", (req, res) => {
     let {userName, email, password} = req.body;
     let id = uuid();
